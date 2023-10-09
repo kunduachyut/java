@@ -1,9 +1,11 @@
 import java.util.Scanner;
 
 public class Q2 {
-    System.out.print("Enter:");
-    Scanner in = new Scanner(System.in);
-    String s = in.nextLine();  
-    System.out.print("The String is : "+s);
-     
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Your string : ");
+        String Str = sc.nextLine();
+        System.out.println("The string is : "+Str);
+        sc.close();
+    }
 }
