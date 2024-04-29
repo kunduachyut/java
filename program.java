@@ -1,7 +1,7 @@
-public class program {
-class A{  
+package java;
+
+public class program{  
     public static void main(String args[]){  
     System.out.println("Hello java");  
     }  
-    }  
-}
+}  

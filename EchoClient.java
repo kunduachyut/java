@@ -1,3 +1,4 @@
+package java;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -14,16 +15,15 @@ public class EchoClient {
 
             
             BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
-            PrintWriter output = new PrintWriter(socket.getOutputStream(), true); // Send data to server
-            BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream())); // Receive data from server
+            PrintWriter output = new PrintWriter(socket.getOutputStream(), true); 
+            BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream())); 
 
-            // Read user input and send it to the server
             System.out.println("Type a message (or type 'exit' to quit):");
             String message;
-            while (!(message = userInput.readLine()).equalsIgnoreCase("exit")) { // Until 'exit' is typed
-                output.println(message); // Send the message to the server
-                String response = input.readLine(); // Read the echoed response
-                System.out.println("Server echoed: " + response); // Display the echoed response
+            while (!(message = userInput.readLine()).equalsIgnoreCase("exit")) { 
+                output.println(message); 
+                String response = input.readLine();
+                System.out.println("Server echoed: " + response); 
                 System.out.println("Type another message (or 'exit' to quit):");
             }
 
